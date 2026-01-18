@@ -1,0 +1,17 @@
+{$FLOWLET_PUBLIC_HOST}:5173 {
+  tls internal
+  encode gzip
+
+  handle /api/* {
+    reverse_proxy backend:8080
+  }
+
+  handle {
+    reverse_proxy frontend:80
+  }
+}
+
+{$FLOWLET_PUBLIC_HOST}:8443 {
+  tls internal
+  reverse_proxy keycloak:8080
+}

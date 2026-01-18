@@ -1,0 +1,77 @@
+{
+  "folders": [
+    {
+      "name": "🌊 Flowlet (Root)",
+      "path": "."
+    },
+    {
+      "name": "☕ Backend (Java)",
+      "path": "flowlet-backend"
+    },
+    {
+      "name": "⚛️ Frontend (React)",
+      "path": "flowlet-frontend"
+    },
+    {
+      "name": "🐍 Code Executor (Python)",
+      "path": "flowlet-code-executor"
+    },
+    {
+      "name": "🐍 Mock Service (Python)",
+      "path": "flowlet-mock-service"
+    },
+    {
+      "name": "🐍 Embedding (Python)",
+      "path": "flowlet-embedding"
+    },
+    {
+      "name": "🐍 Vector Stores (Python)",
+      "path": "flowlet-vector-stores"
+    }
+  ],
+  "settings": {
+    // 全局设置
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "**/node_modules": true,
+      "**/target": false,
+      "**/__pycache__": true,
+      "**/.venv": true,
+      "**/*.pyc": true
+    },
+    
+    // Java 设置
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.project.importOnFirstTimeStartup": "automatic",
+    "java.errors.incompleteClasspath.severity": "warning",
+    
+    // Python 全局设置
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.exclude": ["**/.venv/**"],
+    "python.terminal.activateEnvironment": true,
+
+    // TypeScript/JavaScript 全局诊断
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+    "typescript.tsserver.experimental.projectDiagnosticsScope": "configuredProjects",
+    "typescript.tsserver.exclude": ["**/node_modules/**"],
+    "javascript.tsserver.experimental.enableProjectDiagnostics": true,
+    "javascript.tsserver.experimental.projectDiagnosticsScope": "configuredProjects",
+    "javascript.tsserver.exclude": ["**/node_modules/**"],
+    "eslint.workingDirectories": [{ "mode": "auto" }],
+    "eslint.run": "onType",
+    
+    // 文件关联
+    "files.associations": {
+      "*.yml": "yaml",
+      "*.yaml": "yaml"
+    }
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": []
+  }
+}

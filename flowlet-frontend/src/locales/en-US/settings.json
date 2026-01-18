@@ -1,0 +1,143 @@
+{
+  "pageTitle": "System Settings",
+  "pageDescription": "Centrally manage model and vector store access configurations for flow node invocations and orchestration.",
+  "breadcrumb": {
+    "settings": "System Settings"
+  },
+  "tabs": {
+    "models": "Model Configuration",
+    "vectorStores": "Vector Stores"
+  },
+  "sections": {
+    "standardProviders": "Standard Providers",
+    "customModels": "Custom Models",
+    "vectorStoreProviders": "Vector Store Providers"
+  },
+  "buttons": {
+    "addModel": "Add Model",
+    "addProvider": "Add Provider"
+  },
+  "columns": {
+    "provider": "Model Provider",
+    "vectorStore": "Vector Store",
+    "modelList": "Model List",
+    "status": "Status",
+    "configTime": "Config Time",
+    "address": "Address"
+  },
+  "status": {
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "notConfigured": "Not Configured",
+    "active": "Active",
+    "inactive": "Disabled"
+  },
+  "modal": {
+    "configureProvider": "Configure Model Provider",
+    "configureProviderWithName": "Configure {{name}}",
+    "addModel": "Add Model",
+    "addProvider": "Add Provider",
+    "baseUrl": "Base URL",
+    "baseUrlPlaceholder": "Enter Base URL",
+    "apiKey": "API Key",
+    "apiKeyPlaceholder": "Enter new key or leave empty to use saved key",
+    "apiKeyHint": "Key saved. Leave empty to use saved key",
+    "apiKeyRequired": "Please enter API Key",
+    "clearKey": "Clear Key",
+    "confirmClearKey": "Are you sure you want to clear the saved API Key?",
+    "defaultModel": "Default Model",
+    "defaultModelPlaceholder": "e.g. gpt-4o / claude-3.5-sonnet",
+    "enableProvider": "Enable this provider",
+    "testConnection": "Test Connection",
+    "testResultTitle": "Connection Test Result",
+    "modelManagement": "Model Management",
+    "refreshModels": "Refresh Model List",
+    "searchModels": "Search models...",
+    "modelName": "Model Name",
+    "modelId": "Model ID",
+    "multimodal": "Multimodal",
+    "modelList": "Model List",
+    "modelPlaceholder": "Enter model name",
+    "name": "Name",
+    "namePlaceholder": "Enter name",
+    "providerType": "Provider Type",
+    "database": "Database",
+    "databasePlaceholder": "Enter database name",
+    "grpcUrl": "gRPC URL",
+    "grpcUrlPlaceholder": "Enter gRPC URL",
+    "preferGrpc": "Prefer gRPC",
+    "noModelsYet": "Model list not fetched yet",
+    "noModelsYetDescription": "Click \"Refresh Model List\" to get available models",
+    "noMatchingModels": "No matching models found",
+    "enabledModelsCount": "{{count}} models enabled"
+  },
+  "customModal": {
+    "editTitle": "Edit Custom Model",
+    "createTitle": "Create Custom Model",
+    "providerName": "Provider Name",
+    "providerNameRequired": "Please enter a name",
+    "providerNamePlaceholder": "e.g. qwen / llama / custom-gateway",
+    "modelListLabel": "Model List",
+    "atLeastOneModel": "Please add at least one model",
+    "modelIdRequired": "Model ID cannot be empty",
+    "modelIdPlaceholder": "e.g. qwen-max / llama-3.1-70b",
+    "addModel": "Add Model",
+    "hint": "Custom models use OpenAI-compatible mode and can be selected in node configurations."
+  },
+  "vectorStoreModal": {
+    "editTitle": "Edit Vector Store",
+    "addTitle": "Add Vector Store",
+    "name": "Name",
+    "nameRequired": "Please enter a name",
+    "namePlaceholder": "e.g. Production Milvus / Qdrant Cloud",
+    "providerType": "Storage Type",
+    "providerTypeRequired": "Please select storage type",
+    "tokenApiKey": "Token / API Key",
+    "tokenPlaceholder": "Can be empty for private deployments",
+    "database": "Database",
+    "databaseTooltip": "Select an existing database or add a new one. New databases will be created automatically on first use.",
+    "databaseExtra": "Database will be created automatically on first use, no manual initialization required. One config per environment.",
+    "databasePlaceholder": "Select Database (default: default)",
+    "createDbTitle": "Create New Database",
+    "createDbPlaceholder": "Enter database name (e.g. production)",
+    "createNewDb": "Create New Database",
+    "dbNameRequired": "Please enter database name",
+    "dbExists": "Database already exists",
+    "dbAddedSuccess": "Database config added: {{name}} (will be created on first use)",
+    "totalDatabases": "{{count}} databases total",
+    "grpcUrl": "gRPC Address",
+    "preferGrpc": "Prefer gRPC",
+    "useHttp": "Use HTTP",
+    "hint": "Once configured, this provider can be selected in vector store nodes.",
+    "fillTypeAndUrl": "Please fill in storage type and Base URL first",
+    "connectionSuccess": "Connection successful!",
+    "connectionFailed": "Connection failed",
+    "networkError": "Network error",
+    "testFailed": "Connection test failed"
+  },
+  "confirm": {
+    "deleteProvider": "Are you sure you want to delete this provider configuration?",
+    "deleteVectorStore": "Are you sure you want to delete this vector store configuration?"
+  },
+  "message": {
+    "fillBaseUrl": "Please fill in the Base URL first",
+    "fillApiKey": "Please fill in the API Key or save the key first",
+    "modelListRefreshed": "Model list refreshed",
+    "fillUrlAndKey": "Please enter Base URL and API Key (or saved key) before testing",
+    "connectionSuccess": "Connection test successful",
+    "testResult": {
+      "success": "Success",
+      "failed": "Failed"
+    }
+  },
+  "modelTypes": {
+    "chat": "Chat Models",
+    "embedding": "Embedding Models",
+    "image": "Image Models",
+    "audio": "Audio Models",
+    "video": "Video Models",
+    "unknown": "Other",
+    "modelList": "Model List",
+    "other": "Other"
+  }
+}

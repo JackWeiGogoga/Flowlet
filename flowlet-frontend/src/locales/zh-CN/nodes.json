@@ -1,0 +1,235 @@
+{
+  "types": {
+    "start": {
+      "label": "开始",
+      "description": "流程起点"
+    },
+    "end": {
+      "label": "结束",
+      "description": "流程终点"
+    },
+    "api": {
+      "label": "API 调用",
+      "description": "HTTP 请求"
+    },
+    "kafka": {
+      "label": "Kafka",
+      "description": "消息发送"
+    },
+    "code": {
+      "label": "代码",
+      "description": "执行 Python 脚本"
+    },
+    "condition": {
+      "label": "条件判断",
+      "description": "分支逻辑"
+    },
+    "transform": {
+      "label": "数据转换",
+      "description": "字段映射"
+    },
+    "subflow": {
+      "label": "子流程",
+      "description": "调用其他流程"
+    },
+    "forEach": {
+      "label": "ForEach",
+      "description": "遍历集合并执行子流程"
+    },
+    "llm": {
+      "label": "LLM 调用",
+      "description": "调用大语言模型"
+    },
+    "vectorStore": {
+      "label": "向量存储",
+      "description": "写入/检索向量数据"
+    },
+    "variableAssigner": {
+      "label": "赋值",
+      "description": "变量赋值操作"
+    },
+    "jsonParser": {
+      "label": "JSON 解析器",
+      "description": "解析 JSON 字符串"
+    },
+    "simhash": {
+      "label": "Simhash 去重",
+      "description": "文本去重与相似检索"
+    },
+    "keywordMatch": {
+      "label": "关键词匹配",
+      "description": "关键词命中检测"
+    }
+  },
+  "config": {
+    "nodeName": "节点名称",
+    "nodeNamePlaceholder": "请输入节点名称",
+    "description": "描述",
+    "descriptionPlaceholder": "请输入节点描述",
+    "inputVariables": "输入变量",
+    "outputVariables": "输出变量",
+    "addVariable": "添加变量",
+    "variableName": "变量名",
+    "variableType": "类型",
+    "variableValue": "值",
+    "required": "必填",
+    "optional": "可选",
+    "executionCondition": "执行条件",
+    "timeout": "超时时间",
+    "retryCount": "重试次数",
+    "retryInterval": "重试间隔"
+  },
+  "api": {
+    "url": "请求 URL",
+    "urlPlaceholder": "请输入请求 URL",
+    "method": "请求方法",
+    "headers": "请求头",
+    "addHeader": "添加请求头",
+    "headerKey": "键",
+    "headerValue": "值",
+    "body": "请求体",
+    "bodyPlaceholder": "请输入请求体（JSON 格式）",
+    "responseMapping": "响应映射",
+    "authConfig": "认证配置",
+    "noAuth": "无认证",
+    "basicAuth": "Basic 认证",
+    "bearerToken": "Bearer Token",
+    "apiKey": "API Key"
+  },
+  "code": {
+    "language": "语言",
+    "codeEditor": "代码编辑器",
+    "codePlaceholder": "请输入代码"
+  },
+  "condition": {
+    "conditions": "条件",
+    "addCondition": "添加条件",
+    "field": "字段",
+    "operator": "操作符",
+    "value": "值",
+    "and": "且",
+    "or": "或",
+    "defaultBranch": "默认分支",
+    "trueBranch": "True 分支",
+    "falseBranch": "False 分支",
+    "operators": {
+      "equals": "等于",
+      "notEquals": "不等于",
+      "contains": "包含",
+      "notContains": "不包含",
+      "greaterThan": "大于",
+      "lessThan": "小于",
+      "greaterOrEqual": "大于等于",
+      "lessOrEqual": "小于等于",
+      "isEmpty": "为空",
+      "isNotEmpty": "不为空",
+      "startsWith": "以...开头",
+      "endsWith": "以...结尾"
+    }
+  },
+  "transform": {
+    "mappings": "字段映射",
+    "addMapping": "添加映射",
+    "sourceField": "源字段",
+    "targetField": "目标字段",
+    "transformType": "转换类型",
+    "expression": "表达式"
+  },
+  "llm": {
+    "provider": "模型提供方",
+    "providerPlaceholder": "请选择模型提供方",
+    "model": "模型",
+    "modelPlaceholder": "请选择模型",
+    "systemPrompt": "系统提示",
+    "systemPromptPlaceholder": "请输入系统提示",
+    "userPrompt": "用户提示",
+    "userPromptPlaceholder": "请输入用户提示",
+    "temperature": "温度",
+    "maxTokens": "最大 Token 数",
+    "noProviderAlert": "还没有可用的模型提供方",
+    "noProviderDesc": "请先在系统设置中配置并启用模型提供方。"
+  },
+  "vectorStore": {
+    "operation": "操作类型",
+    "search": "搜索",
+    "insert": "写入",
+    "provider": "向量存储提供方",
+    "providerPlaceholder": "请选择向量存储提供方",
+    "collection": "集合名称",
+    "collectionPlaceholder": "请输入集合名称",
+    "topK": "返回数量 (Top K)",
+    "vector": "向量数据",
+    "vectorPlaceholder": "请输入向量数据",
+    "content": "文本内容",
+    "contentPlaceholder": "请输入文本内容",
+    "noProviderAlert": "还没有可用的向量存储提供方",
+    "noProviderDesc": "请先在系统设置中配置并启用向量存储提供方。"
+  },
+  "kafka": {
+    "topic": "Topic",
+    "topicPlaceholder": "请输入 Topic 名称",
+    "message": "消息内容",
+    "messagePlaceholder": "请输入消息内容",
+    "key": "消息 Key",
+    "keyPlaceholder": "请输入消息 Key（可选）"
+  },
+  "forEach": {
+    "collection": "集合变量",
+    "collectionPlaceholder": "请选择要遍历的集合变量",
+    "itemVariable": "元素变量名",
+    "itemVariablePlaceholder": "请输入元素变量名",
+    "indexVariable": "索引变量名",
+    "indexVariablePlaceholder": "请输入索引变量名",
+    "subflow": "子流程",
+    "subflowPlaceholder": "请选择要执行的子流程"
+  },
+  "subflow": {
+    "selectFlow": "选择流程",
+    "selectFlowPlaceholder": "请选择要调用的流程",
+    "inputMapping": "输入参数映射",
+    "outputMapping": "输出参数映射"
+  },
+  "variableAssigner": {
+    "assignments": "赋值列表",
+    "addAssignment": "添加赋值",
+    "targetVariable": "目标变量",
+    "sourceValue": "源值"
+  },
+  "jsonParser": {
+    "inputField": "输入字段",
+    "inputFieldPlaceholder": "请选择包含 JSON 字符串的字段",
+    "outputSchema": "输出结构"
+  },
+  "simhash": {
+    "inputText": "输入文本",
+    "inputTextPlaceholder": "请选择要处理的文本字段",
+    "threshold": "相似度阈值",
+    "operation": "操作类型",
+    "check": "检查重复",
+    "add": "添加记录"
+  },
+  "keywordMatch": {
+    "inputText": "输入文本",
+    "inputTextPlaceholder": "请选择要匹配的文本字段",
+    "keywordLibrary": "关键词库",
+    "keywordLibraryPlaceholder": "请选择关键词库",
+    "matchMode": "匹配模式",
+    "matchAll": "全部匹配",
+    "matchAny": "任意匹配"
+  },
+  "start": {
+    "inputSchema": "输入参数定义",
+    "addParam": "添加参数",
+    "paramName": "参数名",
+    "paramType": "类型",
+    "paramRequired": "必填",
+    "paramDefault": "默认值",
+    "paramDesc": "描述"
+  },
+  "end": {
+    "outputMapping": "输出映射",
+    "addOutput": "添加输出",
+    "outputName": "输出名",
+    "outputValue": "输出值"
+  }
+}

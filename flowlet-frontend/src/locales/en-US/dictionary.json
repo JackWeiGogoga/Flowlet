@@ -1,0 +1,311 @@
+{
+  "pageTitle": "Data Dictionary",
+  "breadcrumb": {
+    "dictionary": "Data Dictionary"
+  },
+  "tabs": {
+    "structures": "Data Structures",
+    "enums": "Enums",
+    "constants": "Constants"
+  },
+  "empty": {
+    "selectProject": "Please select a project first"
+  },
+  "dataStructure": {
+    "title": "Data Structures",
+    "create": "Create",
+    "searchPlaceholder": "Search...",
+    "scopeAll": "All",
+    "scopeProject": "Project Level",
+    "scopeFlow": "Flow Level",
+    "empty": "No data structures",
+    "projectLevel": "Project Level (global)",
+    "generic": "Generic",
+    "edit": "Edit",
+    "copy": "Copy",
+    "promoteToProject": "Promote to Project Level",
+    "fieldsCount": "{{count}} fields",
+    "usageCount": "Referenced {{count}} times",
+    "confirm": {
+      "delete": "Are you sure to delete this data structure?",
+      "deleteWithUsage": "This structure is referenced by {{count}} places"
+    },
+    "message": {
+      "loadFailed": "Failed to load data structures",
+      "deleteSuccess": "Deleted successfully",
+      "deleteFailed": "Delete failed",
+      "promoteSuccess": "Promoted to project level",
+      "promoteFailed": "Operation failed",
+      "copySuccess": "Copied successfully",
+      "copyFailed": "Copy failed",
+      "jsonGenerated": "Fields generated from JSON",
+      "atLeastOneField": "Please add at least one field",
+      "fieldNameRequired": "Field name cannot be empty",
+      "updated": "Data structure updated",
+      "created": "Data structure created",
+      "saveFailed": "Save failed, please try again"
+    },
+    "drawer": {
+      "editTitle": "Edit Data Structure",
+      "createTitle": "Create Data Structure",
+      "name": "Name",
+      "namePlaceholder": "e.g. UserInfo, OrderItem",
+      "nameRequired": "Please enter a name",
+      "namePattern": "Name must start with a letter and can only contain letters, numbers, and underscores",
+      "description": "Description",
+      "descriptionPlaceholder": "Describe the purpose of this data structure",
+      "scope": "Scope",
+      "scopePlaceholder": "Select scope",
+      "scopeProjectLevel": "Project Level (global)",
+      "scopeFlowPrefix": "Flow: {{name}}",
+      "scopeCurrentFlow": "Current Flow",
+      "genericParams": "Generic Parameters",
+      "genericTooltip1": "When enabled, you can define generic structures like Result<T>",
+      "genericTooltip2": "You can use generic parameters (like T) as type placeholders in field types",
+      "enableGeneric": "Enable Generic",
+      "paramName": "Param name (e.g. T)",
+      "paramDesc": "Description (e.g. Data Type)",
+      "addParam": "Add Parameter",
+      "fieldDefinition": "Field Definition",
+      "fieldEditor": "Field Editor",
+      "fromJson": "From JSON",
+      "jsonPlaceholder": "Paste JSON sample, e.g.:\n{\n  \"id\": 1,\n  \"name\": \"John\",\n  \"email\": \"test@example.com\"\n}",
+      "parseAndGenerate": "Parse and Generate Fields",
+      "enterJson": "Please enter JSON sample",
+      "invalidJson": "Invalid JSON format: {{error}}",
+      "parseFailed": "Parse failed, please check JSON format",
+      "constraintAny": "Any Type",
+      "constraintObject": "Object",
+      "constraintArray": "Array",
+      "constraintString": "String",
+      "constraintNumber": "Number"
+    }
+  },
+  "enum": {
+    "title": "Enum Management",
+    "create": "Create Enum",
+    "searchPlaceholder": "Search enums...",
+    "columns": {
+      "name": "Name",
+      "description": "Description",
+      "values": "Enum Values",
+      "updatedAt": "Updated At",
+      "actions": "Actions"
+    },
+    "edit": "Edit",
+    "confirm": {
+      "delete": "Are you sure to delete this enum?"
+    },
+    "message": {
+      "loadFailed": "Failed to load enums",
+      "deleteSuccess": "Deleted successfully",
+      "deleteFailed": "Delete failed",
+      "updated": "Enum updated",
+      "created": "Enum created",
+      "saveFailed": "Failed to save enum",
+      "atLeastOneValue": "Please add at least one enum value"
+    },
+    "drawer": {
+      "editTitle": "Edit Enum",
+      "createTitle": "Create Enum",
+      "name": "Name",
+      "namePlaceholder": "e.g. OrderStatus",
+      "nameRequired": "Please enter a name",
+      "namePattern": "Name must start with a letter and can only contain letters, numbers, and underscores",
+      "description": "Description",
+      "descriptionPlaceholder": "Describe the purpose of this enum",
+      "enumValues": "Enum Values",
+      "addValue": "Add",
+      "valuePlaceholder": "Value",
+      "valueRequired": "Please enter a value",
+      "labelPlaceholder": "Display name (optional)",
+      "descPlaceholder": "Description (optional)"
+    }
+  },
+  "constant": {
+    "title": "Constant Management",
+    "create": "Create Constant",
+    "searchPlaceholder": "Search constants...",
+    "scopeAll": "All",
+    "scopeProject": "Project Level",
+    "scopeFlow": "Flow Level",
+    "empty": "No constants",
+    "projectLevel": "Project Level (global)",
+    "edit": "Edit",
+    "confirm": {
+      "delete": "Are you sure to delete this constant?"
+    },
+    "message": {
+      "loadFailed": "Failed to load constants",
+      "deleteSuccess": "Deleted successfully",
+      "deleteFailed": "Delete failed",
+      "updated": "Constant updated",
+      "created": "Constant created",
+      "saveFailed": "Save failed, please try again",
+      "numberRequired": "Please enter a numeric value",
+      "numberInvalid": "Invalid numeric value",
+      "jsonRequired": "Please enter JSON value",
+      "jsonInvalid": "Invalid JSON format",
+      "objectRequired": "Object constant must be a JSON object",
+      "arrayRequired": "Array constant must be a JSON array"
+    },
+    "drawer": {
+      "editTitle": "Edit Constant",
+      "createTitle": "Create Constant",
+      "name": "Name",
+      "namePlaceholder": "e.g. API_KEY, DEFAULT_LIMIT",
+      "nameRequired": "Please enter a constant name",
+      "namePattern": "Name must start with a letter or underscore, and can only contain letters, numbers, and underscores",
+      "description": "Description",
+      "descriptionPlaceholder": "Describe the purpose of this constant",
+      "scope": "Scope",
+      "scopePlaceholder": "Select scope",
+      "scopeProjectLevel": "Project Level (global)",
+      "scopeFlowPrefix": "Flow: {{name}}",
+      "scopeCurrentFlow": "Current Flow",
+      "valueType": "Type",
+      "valueTypeRequired": "Please select a constant type",
+      "value": "Constant Value",
+      "valueRequired": "Please enter a constant value",
+      "stringPlaceholder": "Enter string constant value",
+      "objectPlaceholder": "Enter JSON object, e.g. {\"key\":\"value\"}",
+      "arrayPlaceholder": "Enter JSON array, e.g. [1,2,3]",
+      "types": {
+        "string": "String",
+        "number": "Number",
+        "boolean": "Boolean",
+        "object": "Object (JSON)",
+        "array": "Array (JSON)"
+      }
+    }
+  },
+  "keyword": {
+    "title": "Keyword Management",
+    "libraryDetail": "Library Details",
+    "back": "Back",
+    "editLibraryButton": "Edit Library",
+    "createLibrary": "New Library",
+    "searchLibrary": "Search libraries",
+    "searchKeyword": "Search keywords",
+    "searchGroup": "Search rule groups",
+    "noLibrary": "Library not found",
+    "tabs": {
+      "terms": "Keywords",
+      "groups": "Rule Groups"
+    },
+    "columns": {
+      "library": "Library",
+      "description": "Description",
+      "createdAt": "Created At",
+      "enabled": "Enabled",
+      "actions": "Actions",
+      "keyword": "Keyword",
+      "type": "Type",
+      "createdBy": "Created By",
+      "group": "Rule Group",
+      "actionLevel": "Action Level",
+      "termCount": "Keyword Count",
+      "priority": "Priority"
+    },
+    "status": {
+      "enabled": "Enabled",
+      "disabled": "Disabled"
+    },
+    "actions": {
+      "manage": "Manage",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "matchMode": {
+      "normal": "Normal",
+      "pinyin": "Pinyin",
+      "combo": "Combo"
+    },
+    "actionLevels": {
+      "delete": "Delete",
+      "reviewBeforePublish": "Review Before Publish",
+      "publishBeforeReview": "Publish Before Review",
+      "tagOnly": "Tag Only"
+    },
+    "confirm": {
+      "deleteLibrary": "Are you sure to delete this library?",
+      "deleteTerm": "Are you sure to delete this keyword?",
+      "deleteGroup": "Are you sure to delete this rule group?"
+    },
+    "message": {
+      "loadLibraryFailed": "Failed to load libraries",
+      "loadTermFailed": "Failed to load keywords",
+      "loadGroupFailed": "Failed to load rule groups",
+      "libraryCreated": "Library created",
+      "libraryUpdated": "Library updated",
+      "libraryDeleted": "Library deleted",
+      "libraryDeleteFailed": "Failed to delete library",
+      "librarySaveFailed": "Failed to save library",
+      "termCreated": "Keyword created",
+      "termUpdated": "Keyword updated",
+      "termDeleted": "Keyword deleted",
+      "termDeleteFailed": "Failed to delete keyword",
+      "termSaveFailed": "Failed to save keyword",
+      "groupCreated": "Rule group created",
+      "groupUpdated": "Rule group updated",
+      "groupDeleted": "Rule group deleted",
+      "groupDeleteFailed": "Failed to delete rule group",
+      "groupSaveFailed": "Failed to save rule group"
+    },
+    "modal": {
+      "createLibrary": "New Library",
+      "editLibrary": "Edit Library",
+      "createTerm": "New Keyword",
+      "editTerm": "Edit Keyword",
+      "createGroup": "New Rule Group",
+      "editGroup": "Edit Rule Group"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "e.g. Content Safety Library",
+      "nameRequired": "Please enter a name",
+      "description": "Description",
+      "descriptionPlaceholder": "Optional",
+      "enabled": "Enabled",
+      "keyword": "Keyword",
+      "keywordPlaceholder": "Supports Chinese or Pinyin",
+      "keywordRequired": "Please enter a keyword",
+      "matchMode": "Match Type",
+      "matchModeRequired": "Please select a type",
+      "matchModeExtra": "For combo words, separate with commas, e.g. smuggle,gun",
+      "matchModeOptions": {
+        "normal": "Normal Word",
+        "pinyin": "Pinyin Word",
+        "combo": "Combo Word (All Match)"
+      },
+      "groupIds": "Associated Rule Groups",
+      "groupIdsPlaceholder": "Optional",
+      "groupName": "Group Name",
+      "groupNamePlaceholder": "e.g. High Risk Combos",
+      "groupNameRequired": "Please enter a group name",
+      "actionLevel": "Action Level",
+      "actionLevelRequired": "Please select an action level",
+      "priority": "Priority",
+      "termIds": "Associated Keywords",
+      "termIdsExtra": "Type to search, supports on-demand loading",
+      "termIdsPlaceholder": "Search keywords"
+    }
+  },
+  "fieldTypes": {
+    "string": "String",
+    "number": "Number",
+    "boolean": "Boolean",
+    "object": "Object",
+    "array": "Array"
+  },
+  "message": {
+    "loadFlowsFailed": "Failed to load flows",
+    "createSuccess": "Created successfully",
+    "createFailed": "Failed to create",
+    "updateSuccess": "Updated successfully",
+    "updateFailed": "Failed to update",
+    "deleteSuccess": "Deleted successfully",
+    "deleteFailed": "Failed to delete",
+    "loadFailed": "Failed to load"
+  }
+}

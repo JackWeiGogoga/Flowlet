@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DOMAIN=${DOMAIN:-""}
+APP_DOMAIN=${APP_DOMAIN:-""}
+AUTH_DOMAIN=${AUTH_DOMAIN:-""}
+FLOWLET_REALM=${FLOWLET_REALM:-"flowlet"}
+FLOWLET_CLIENT_ID=${FLOWLET_CLIENT_ID:-"flowlet-app"}
+KEYCLOAK_HTTP_PORT=${KEYCLOAK_HTTP_PORT:-"8180"}
+KEYCLOAK_ADMIN_USER=${KEYCLOAK_ADMIN_USER:-"admin"}
+KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD:-"admin123"}
+FLOWLET_ENABLE_OFFLINE_ACCESS=${FLOWLET_ENABLE_OFFLINE_ACCESS:-"false"}
+FLOWLET_MODEL_HUB_KEY=${FLOWLET_MODEL_HUB_KEY:-""}
+
+if [ -z "$APP_DOMAIN" ] && [ -z "$DOMAIN" ]; then
+  echo "[config] APP_DOMAIN or DOMAIN is required" >&2
+  exit 1
+fi
+
+if [ -n "$DOMAIN" ] && [ -z "$APP_DOMAIN" ]; then
+  APP_DOMAIN="$DOMAIN"
+fi
+
+if [ -n "$AUTH_DOMAIN" ]; then
+  AUTH_HOSTS="${AUTH_DOMAIN},${APP_DOMAIN},localhost"
+else
+  AUTH_HOSTS="${APP_DOMAIN},localhost"
+fi
+
+KEYCLOAK_URL="http://127.0.0.1:${KEYCLOAK_HTTP_PORT}"
+
+KEYCLOAK_URL="${KEYCLOAK_URL}" \
+FLOWLET_REALM="${FLOWLET_REALM}" \
+FLOWLET_CLIENT_ID="${FLOWLET_CLIENT_ID}" \
+FLOWLET_HOSTS="${APP_DOMAIN},localhost" \
+FLOWLET_FRONTEND_SCHEME="https" \
+FLOWLET_FRONTEND_PORT="443" \
+FLOWLET_BACKEND_SCHEME="https" \
+FLOWLET_BACKEND_PORT="443" \
+FLOWLET_ALLOW_HTTP="false" \
+FLOWLET_ENABLE_OFFLINE_ACCESS="${FLOWLET_ENABLE_OFFLINE_ACCESS}" \
+KEYCLOAK_ADMIN="${KEYCLOAK_ADMIN_USER}" \
+KEYCLOAK_ADMIN_PASSWORD="${KEYCLOAK_ADMIN_PASSWORD}" \
+KEYCLOAK_FRONTEND_URL="https://${AUTH_DOMAIN:-${APP_DOMAIN}}" \
+bash flowlet-backend/scripts/keycloak-init.sh
+
+if [ -n "$AUTH_DOMAIN" ]; then
+  KEYCLOAK_PUBLIC_HOST="${AUTH_DOMAIN}"
+else
+  KEYCLOAK_PUBLIC_HOST="${APP_DOMAIN}"
+fi
+
+cat <<EOF > flowlet-frontend/.env.local
+VITE_KEYCLOAK_URL=https://${KEYCLOAK_PUBLIC_HOST}/realms/${FLOWLET_REALM}
+VITE_KEYCLOAK_CLIENT_ID=${FLOWLET_CLIENT_ID}
+EOF
+
+cat <<EOF
+[config] wrote frontend env to flowlet-frontend/.env.local
+EOF
+
+cat <<EOF > /tmp/flowlet-backend-env.sh
+export FLOWLET_OIDC_ISSUER="https://${KEYCLOAK_PUBLIC_HOST}/realms/${FLOWLET_REALM}"
+export FLOWLET_MODEL_HUB_KEY="${FLOWLET_MODEL_HUB_KEY}"
+EOF
+
+cat <<EOF
+[config] wrote Keycloak client redirect/web origins for domain ${APP_DOMAIN}
+EOF

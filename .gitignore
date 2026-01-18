@@ -1,0 +1,118 @@
+# ===========================
+# Java / Maven (Backend)
+# ===========================
+flowlet-backend/target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.hs_err_pid*
+
+# Maven
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# ===========================
+# Node / React (Frontend)
+# ===========================
+flowlet-ui/node_modules/
+flowlet-ui/dist/
+flowlet-ui/build/
+flowlet-ui/.vite/
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===========================
+# IDE / Editor
+# ===========================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# VS Code
+# 注意: .vscode/ 和 workspace 配置文件需要提交，以便团队共享配置
+# .vscode/
+# *.code-workspace
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# ===========================
+# OS Files
+# ===========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===========================
+# Database
+# ===========================
+*.db
+*.sqlite
+*.sqlite3
+
+# ===========================
+# Environment / Secrets
+# ===========================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+docker/keycloak-ssl/
+
+# ===========================
+# Misc
+# ===========================
+*.swp
+*.swo
+*~
+.cache/
+tmp/
+temp/
+
+# ===========================
+# Python
+# ===========================
+# Virtual Environments
+.venv/
+.venv.bak/
+venv/
+env/
+ENV/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# ===========================
+# Docker Volumes
+# ===========================
+volumes/
+
+
+# model data
+data/

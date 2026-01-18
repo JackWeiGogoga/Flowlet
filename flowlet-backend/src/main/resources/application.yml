@@ -1,0 +1,134 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: flowlet-backend
+
+  # DevTools 热重载配置
+  devtools:
+    restart:
+      enabled: true
+      # 额外监控的路径
+      additional-paths: src/main/java
+    livereload:
+      enabled: true
+
+  datasource:
+    url: jdbc:sqlite:./data/flowlet.db
+    driver-class-name: org.sqlite.JDBC
+    hikari:
+      maximum-pool-size: 5 # SQLite 单连接
+      connection-timeout: 30000
+
+  sql:
+    init:
+      mode: always
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: flowlet-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+  # OAuth2 资源服务器配置 (JWT 验证)
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # Keycloak JWT 签发者 URI
+          issuer-uri: ${FLOWLET_OIDC_ISSUER:http://localhost:8180/realms/flowlet}
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  type-aliases-package: com.flowlet.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    # log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 禁用 SQL 日志输出
+  global-config:
+    db-config:
+      id-type: assign_uuid
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# 日志配置
+logging:
+  level:
+    "[com.flowlet]": INFO
+    "[org.springframework.web]": INFO
+    "[org.springframework.security]": INFO
+    "[org.springframework.security.oauth2]": INFO
+    # 关闭数据库相关日志
+    "[com.zaxxer.hikari]": WARN
+    "[org.sqlite]": WARN
+    "[com.baomidou.mybatisplus]": WARN
+    "[org.apache.ibatis]": WARN
+    "[org.mybatis]": WARN
+    "[java.sql]": WARN
+    "[javax.sql]": WARN
+    "[org.springframework.jdbc]": WARN
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %clr(%-5level) %clr(${PID:- }){magenta} --- [%15.15t] %clr(%-40.40logger{39}){cyan} : %clr(%L){yellow} - %msg%n"
+
+# Flowlet 自定义配置
+flowlet:
+  kafka:
+    enabled: false # 默认禁用Kafka，按需开启
+    callback-topic: flowlet-callback
+  code-executor:
+    base-url: http://localhost:18090
+    request-timeout-ms: 5000
+    default-timeout-ms: 3000
+    default-memory-mb: 128
+    default-allow-network: false
+  vector-store:
+    base-url: http://localhost:18091
+    request-timeout-ms: 30000
+    embedding-base-url: http://localhost:18092
+  # 安全配置
+  security:
+    enabled: true # 启用 Keycloak JWT 认证
+    model-hub-key: ${FLOWLET_MODEL_HUB_KEY:eZuwxc7XBTsS1ptaUDci0Twtj1XUFYwO4MlyNE0zPC8=}
+
+---
+# 生产环境配置 Profile
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # Keycloak JWT 签发者 URI (根据实际 Realm 修改)
+          issuer-uri: ${FLOWLET_OIDC_ISSUER:http://localhost:8180/realms/flowlet}
+          # 也可以直接配置 JWK Set URI
+          # jwk-set-uri: http://localhost:8180/realms/flowlet/protocol/openid-connect/certs
+
+flowlet:
+  security:
+    enabled: true
+
+---
+# 开发环境配置 Profile
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+flowlet:
+  security:
+    enabled: false

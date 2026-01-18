@@ -1,0 +1,215 @@
+{
+  "app": {
+    "name": "Flowlet",
+    "project": "Project"
+  },
+  "project": {
+    "select": "Select Project",
+    "loading": "Loading...",
+    "empty": "No projects yet, please create one",
+    "create": "New Project",
+    "edit": "Edit Project",
+    "delete": "Delete",
+    "editInfo": "Edit Info",
+    "default": "Default",
+    "name": "Project Name",
+    "namePlaceholder": "Please enter project name",
+    "nameRequired": "Please enter project name",
+    "nameMax": "Project name cannot exceed 50 characters",
+    "description": "Description",
+    "descriptionPlaceholder": "Please enter project description (optional)",
+    "descriptionMax": "Description cannot exceed 500 characters",
+    "createSuccess": "Project \"{{name}}\" created successfully",
+    "createFailed": "Failed to create project",
+    "updateSuccess": "Project \"{{name}}\" updated successfully",
+    "updateFailed": "Failed to update project",
+    "deleteSuccess": "Project \"{{name}}\" deleted",
+    "deleteFailed": "Failed to delete project",
+    "deleteConfirmTitle": "Delete Project",
+    "deleteConfirmDesc": "Are you sure you want to delete project \"{{name}}\"? This action cannot be undone."
+  },
+  "action": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "refresh": "Refresh",
+    "copy": "Copy",
+    "close": "Close",
+    "back": "Back",
+    "submit": "Submit",
+    "reset": "Reset",
+    "add": "Add",
+    "remove": "Remove",
+    "enable": "Enable",
+    "disable": "Disable",
+    "test": "Test",
+    "run": "Run",
+    "stop": "Stop",
+    "retry": "Retry",
+    "export": "Export",
+    "import": "Import",
+    "upload": "Upload",
+    "download": "Download",
+    "preview": "Preview",
+    "view": "View",
+    "more": "More",
+    "loading": "Loading...",
+    "ok": "OK"
+  },
+  "status": {
+    "success": "Success",
+    "failed": "Failed",
+    "pending": "Pending",
+    "running": "Running",
+    "completed": "Completed",
+    "error": "Error",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "configured": "Configured",
+    "notConfigured": "Not Configured",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "message": {
+    "saveSuccess": "Saved successfully",
+    "saveFailed": "Failed to save",
+    "deleteSuccess": "Deleted successfully",
+    "deleteFailed": "Failed to delete",
+    "copySuccess": "Copied successfully",
+    "copyFailed": "Failed to copy",
+    "operationSuccess": "Operation successful",
+    "operationFailed": "Operation failed",
+    "loadFailed": "Failed to load",
+    "confirmDelete": "Are you sure you want to delete?",
+    "confirmAction": "Are you sure you want to proceed?",
+    "testSuccess": "Connection test successful",
+    "testFailed": "Connection test failed"
+  },
+  "table": {
+    "total": "Total {{total}} items",
+    "noData": "No data",
+    "actions": "Actions",
+    "createdAt": "Created At",
+    "updatedAt": "Updated At"
+  },
+  "form": {
+    "required": "This field is required",
+    "pleaseInput": "Please enter",
+    "pleaseSelect": "Please select",
+    "optional": "Optional"
+  },
+  "user": {
+    "login": "Login",
+    "logout": "Logout",
+    "defaultName": "User",
+    "role": "Role",
+    "roles": {
+      "admin": "Admin",
+      "editor": "Editor",
+      "viewer": "Viewer"
+    },
+    "systemSettings": "System Settings"
+  },
+  "time": {
+    "seconds": "seconds",
+    "minutes": "minutes",
+    "hours": "hours",
+    "days": "days",
+    "ago": "ago",
+    "configTime": "Config Time"
+  },
+  "timeRange": {
+    "placeholder": "Select time range",
+    "custom": "Custom Range",
+    "customTitle": "Start and End Time",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "startPlaceholder": "Select start time (optional)",
+    "endPlaceholder": "Select end time (optional)",
+    "toNow": "Now",
+    "earliest": "Earliest",
+    "presets": {
+      "30m": "Last 30 minutes",
+      "1h": "Last 1 hour",
+      "6h": "Last 6 hours",
+      "24h": "Last 24 hours",
+      "3d": "Last 3 days",
+      "7d": "Last 7 days",
+      "14d": "Last 14 days",
+      "1M": "Last 1 month",
+      "3M": "Last 3 months",
+      "all": "All Time"
+    }
+  },
+  "nodeTypes": {
+    "panelTitle": "Node Palette",
+    "start": {
+      "label": "Start",
+      "description": "Flow start point"
+    },
+    "end": {
+      "label": "End",
+      "description": "Flow end point"
+    },
+    "api": {
+      "label": "API Call",
+      "description": "HTTP request"
+    },
+    "kafka": {
+      "label": "Kafka",
+      "description": "Send message"
+    },
+    "code": {
+      "label": "Code",
+      "description": "Execute Python script"
+    },
+    "condition": {
+      "label": "Condition",
+      "description": "Branch logic"
+    },
+    "transform": {
+      "label": "Transform",
+      "description": "Field mapping"
+    },
+    "subflow": {
+      "label": "Subflow",
+      "description": "Call another flow"
+    },
+    "for_each": {
+      "label": "ForEach",
+      "description": "Iterate collection and execute subflow"
+    },
+    "llm": {
+      "label": "LLM Call",
+      "description": "Call large language model"
+    },
+    "vector_store": {
+      "label": "Vector Store",
+      "description": "Write/retrieve vector data"
+    },
+    "variable_assigner": {
+      "label": "Assign",
+      "description": "Variable assignment"
+    },
+    "json_parser": {
+      "label": "JSON Parser",
+      "description": "Parse JSON string"
+    },
+    "simhash": {
+      "label": "Simhash Dedup",
+      "description": "Text deduplication and similarity search"
+    },
+    "keyword_match": {
+      "label": "Keyword Match",
+      "description": "Keyword hit detection"
+    },
+    "note": {
+      "label": "Note",
+      "description": "Add text annotation"
+    }
+  }
+}

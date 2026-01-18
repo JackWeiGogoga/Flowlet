@@ -1,0 +1,13 @@
+[project]
+name = "flowlet-vector-stores"
+version = "0.1.0"
+description = "Unified vector store service for Milvus and Qdrant with pre-computed vectors."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.110.0",
+  "pydantic>=2.6.0",
+  "pymilvus[milvus_lite]>=2.4.0",
+  "qdrant-client>=1.9.0",
+  "uvicorn>=0.23.0",
+]

@@ -1,0 +1,133 @@
+{
+  "history": {
+    "title": "Execution History",
+    "columns": {
+      "id": "Execution ID",
+      "flowName": "Flow Name",
+      "version": "Version",
+      "status": "Status",
+      "startedAt": "Started At",
+      "completedAt": "Completed At",
+      "duration": "Duration",
+      "actions": "Actions"
+    },
+    "status": {
+      "all": "All Statuses",
+      "completed": "Completed",
+      "failed": "Failed",
+      "running": "Running",
+      "pending": "Pending",
+      "waiting": "Waiting Callback"
+    },
+    "filter": {
+      "statusPlaceholder": "Execution Status",
+      "flowPlaceholder": "Select Flow",
+      "loadingFlows": "Loading...",
+      "noFlows": "No flows"
+    },
+    "actions": {
+      "detail": "Details"
+    },
+    "pagination": {
+      "total": "Total {{total}} records"
+    },
+    "message": {
+      "loadFailed": "Failed to load execution history"
+    },
+    "breadcrumb": {
+      "flowManagement": "Flow Management",
+      "flow": "Flow",
+      "history": "Execution History"
+    }
+  },
+  "detail": {
+    "title": "Execution Detail",
+    "info": {
+      "executionId": "Execution ID",
+      "flowId": "Flow ID",
+      "flowName": "Flow Name",
+      "version": "Version",
+      "flowVersion": "Flow Version",
+      "status": "Status",
+      "startedAt": "Started At",
+      "completedAt": "Completed At",
+      "duration": "Duration",
+      "triggerType": "Trigger Type",
+      "triggeredBy": "Triggered By"
+    },
+    "triggerType": {
+      "manual": "Manual",
+      "api": "API",
+      "schedule": "Scheduled",
+      "callback": "Callback"
+    },
+    "tabs": {
+      "graph": "Flow Graph",
+      "inputs": "Input Parameters",
+      "outputs": "Output Results",
+      "logs": "Execution Logs",
+      "nodes": "Node Executions",
+      "nodeList": "Node List"
+    },
+    "cards": {
+      "executionInfo": "Execution Info",
+      "inputData": "Input Data",
+      "outputData": "Output Data",
+      "nodeRecords": "Node Execution Records"
+    },
+    "sections": {
+      "input": "Input",
+      "output": "Output",
+      "executionInfo": "Execution Info",
+      "error": "Error",
+      "waitingCallback": "Waiting Callback"
+    },
+    "nodeList": {
+      "title": "Node List",
+      "nodeCount": "{{count}} nodes",
+      "noRecords": "No node execution records",
+      "noGraphData": "No flow graph data"
+    },
+    "nodeExecution": {
+      "columns": {
+        "nodeName": "Node Name",
+        "nodeType": "Node Type",
+        "status": "Status",
+        "startedAt": "Started At",
+        "completedAt": "Completed At",
+        "duration": "Duration",
+        "error": "Error Message"
+      }
+    },
+    "actions": {
+      "back": "Back",
+      "refresh": "Refresh",
+      "rerun": "Rerun",
+      "viewFlow": "View Flow",
+      "copy": "Copy"
+    },
+    "zoom": {
+      "zoomIn": "Zoom In",
+      "zoomOut": "Zoom Out",
+      "fitView": "Fit View"
+    },
+    "status": {
+      "completed": "Completed",
+      "failed": "Failed",
+      "running": "Running",
+      "waiting": "Waiting Callback",
+      "paused": "Paused",
+      "pending": "Pending",
+      "notExecuted": "Not Executed"
+    },
+    "message": {
+      "loadFailed": "Failed to load execution details",
+      "rerunSuccess": "Rerun initiated",
+      "rerunFailed": "Failed to rerun",
+      "copySuccess": "Copied to clipboard",
+      "notExist": "Execution record not found"
+    },
+    "loading": "Loading...",
+    "noData": "N/A"
+  }
+}

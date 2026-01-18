@@ -1,0 +1,235 @@
+{
+  "types": {
+    "start": {
+      "label": "Start",
+      "description": "Flow entry point"
+    },
+    "end": {
+      "label": "End",
+      "description": "Flow end point"
+    },
+    "api": {
+      "label": "API Call",
+      "description": "HTTP request"
+    },
+    "kafka": {
+      "label": "Kafka",
+      "description": "Send message"
+    },
+    "code": {
+      "label": "Code",
+      "description": "Execute Python script"
+    },
+    "condition": {
+      "label": "Condition",
+      "description": "Branch logic"
+    },
+    "transform": {
+      "label": "Transform",
+      "description": "Field mapping"
+    },
+    "subflow": {
+      "label": "Subflow",
+      "description": "Call another flow"
+    },
+    "forEach": {
+      "label": "ForEach",
+      "description": "Iterate collection and execute subflow"
+    },
+    "llm": {
+      "label": "LLM Call",
+      "description": "Call large language model"
+    },
+    "vectorStore": {
+      "label": "Vector Store",
+      "description": "Write/retrieve vector data"
+    },
+    "variableAssigner": {
+      "label": "Assign",
+      "description": "Variable assignment"
+    },
+    "jsonParser": {
+      "label": "JSON Parser",
+      "description": "Parse JSON string"
+    },
+    "simhash": {
+      "label": "Simhash Dedup",
+      "description": "Text deduplication and similarity search"
+    },
+    "keywordMatch": {
+      "label": "Keyword Match",
+      "description": "Keyword hit detection"
+    }
+  },
+  "config": {
+    "nodeName": "Node Name",
+    "nodeNamePlaceholder": "Enter node name",
+    "description": "Description",
+    "descriptionPlaceholder": "Enter node description",
+    "inputVariables": "Input Variables",
+    "outputVariables": "Output Variables",
+    "addVariable": "Add Variable",
+    "variableName": "Variable Name",
+    "variableType": "Type",
+    "variableValue": "Value",
+    "required": "Required",
+    "optional": "Optional",
+    "executionCondition": "Execution Condition",
+    "timeout": "Timeout",
+    "retryCount": "Retry Count",
+    "retryInterval": "Retry Interval"
+  },
+  "api": {
+    "url": "Request URL",
+    "urlPlaceholder": "Enter request URL",
+    "method": "Method",
+    "headers": "Headers",
+    "addHeader": "Add Header",
+    "headerKey": "Key",
+    "headerValue": "Value",
+    "body": "Body",
+    "bodyPlaceholder": "Enter request body (JSON format)",
+    "responseMapping": "Response Mapping",
+    "authConfig": "Auth Config",
+    "noAuth": "No Auth",
+    "basicAuth": "Basic Auth",
+    "bearerToken": "Bearer Token",
+    "apiKey": "API Key"
+  },
+  "code": {
+    "language": "Language",
+    "codeEditor": "Code Editor",
+    "codePlaceholder": "Enter code"
+  },
+  "condition": {
+    "conditions": "Conditions",
+    "addCondition": "Add Condition",
+    "field": "Field",
+    "operator": "Operator",
+    "value": "Value",
+    "and": "AND",
+    "or": "OR",
+    "defaultBranch": "Default Branch",
+    "trueBranch": "True Branch",
+    "falseBranch": "False Branch",
+    "operators": {
+      "equals": "Equals",
+      "notEquals": "Not Equals",
+      "contains": "Contains",
+      "notContains": "Not Contains",
+      "greaterThan": "Greater Than",
+      "lessThan": "Less Than",
+      "greaterOrEqual": "Greater or Equal",
+      "lessOrEqual": "Less or Equal",
+      "isEmpty": "Is Empty",
+      "isNotEmpty": "Is Not Empty",
+      "startsWith": "Starts With",
+      "endsWith": "Ends With"
+    }
+  },
+  "transform": {
+    "mappings": "Field Mappings",
+    "addMapping": "Add Mapping",
+    "sourceField": "Source Field",
+    "targetField": "Target Field",
+    "transformType": "Transform Type",
+    "expression": "Expression"
+  },
+  "llm": {
+    "provider": "Model Provider",
+    "providerPlaceholder": "Select model provider",
+    "model": "Model",
+    "modelPlaceholder": "Select model",
+    "systemPrompt": "System Prompt",
+    "systemPromptPlaceholder": "Enter system prompt",
+    "userPrompt": "User Prompt",
+    "userPromptPlaceholder": "Enter user prompt",
+    "temperature": "Temperature",
+    "maxTokens": "Max Tokens",
+    "noProviderAlert": "No model provider available",
+    "noProviderDesc": "Please configure and enable a model provider in Settings first."
+  },
+  "vectorStore": {
+    "operation": "Operation",
+    "search": "Search",
+    "insert": "Insert",
+    "provider": "Vector Store Provider",
+    "providerPlaceholder": "Select vector store provider",
+    "collection": "Collection Name",
+    "collectionPlaceholder": "Enter collection name",
+    "topK": "Top K",
+    "vector": "Vector Data",
+    "vectorPlaceholder": "Enter vector data",
+    "content": "Text Content",
+    "contentPlaceholder": "Enter text content",
+    "noProviderAlert": "No vector store provider available",
+    "noProviderDesc": "Please configure and enable a vector store provider in Settings first."
+  },
+  "kafka": {
+    "topic": "Topic",
+    "topicPlaceholder": "Enter topic name",
+    "message": "Message",
+    "messagePlaceholder": "Enter message content",
+    "key": "Message Key",
+    "keyPlaceholder": "Enter message key (optional)"
+  },
+  "forEach": {
+    "collection": "Collection Variable",
+    "collectionPlaceholder": "Select collection variable to iterate",
+    "itemVariable": "Item Variable Name",
+    "itemVariablePlaceholder": "Enter item variable name",
+    "indexVariable": "Index Variable Name",
+    "indexVariablePlaceholder": "Enter index variable name",
+    "subflow": "Subflow",
+    "subflowPlaceholder": "Select subflow to execute"
+  },
+  "subflow": {
+    "selectFlow": "Select Flow",
+    "selectFlowPlaceholder": "Select flow to call",
+    "inputMapping": "Input Parameter Mapping",
+    "outputMapping": "Output Parameter Mapping"
+  },
+  "variableAssigner": {
+    "assignments": "Assignments",
+    "addAssignment": "Add Assignment",
+    "targetVariable": "Target Variable",
+    "sourceValue": "Source Value"
+  },
+  "jsonParser": {
+    "inputField": "Input Field",
+    "inputFieldPlaceholder": "Select field containing JSON string",
+    "outputSchema": "Output Schema"
+  },
+  "simhash": {
+    "inputText": "Input Text",
+    "inputTextPlaceholder": "Select text field to process",
+    "threshold": "Similarity Threshold",
+    "operation": "Operation",
+    "check": "Check Duplicate",
+    "add": "Add Record"
+  },
+  "keywordMatch": {
+    "inputText": "Input Text",
+    "inputTextPlaceholder": "Select text field to match",
+    "keywordLibrary": "Keyword Library",
+    "keywordLibraryPlaceholder": "Select keyword library",
+    "matchMode": "Match Mode",
+    "matchAll": "Match All",
+    "matchAny": "Match Any"
+  },
+  "start": {
+    "inputSchema": "Input Parameter Definition",
+    "addParam": "Add Parameter",
+    "paramName": "Parameter Name",
+    "paramType": "Type",
+    "paramRequired": "Required",
+    "paramDefault": "Default Value",
+    "paramDesc": "Description"
+  },
+  "end": {
+    "outputMapping": "Output Mapping",
+    "addOutput": "Add Output",
+    "outputName": "Output Name",
+    "outputValue": "Output Value"
+  }
+}

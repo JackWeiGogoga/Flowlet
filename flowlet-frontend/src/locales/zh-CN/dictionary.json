@@ -1,0 +1,311 @@
+{
+  "pageTitle": "数据字典",
+  "breadcrumb": {
+    "dictionary": "数据字典"
+  },
+  "tabs": {
+    "structures": "数据结构",
+    "enums": "枚举",
+    "constants": "常量"
+  },
+  "empty": {
+    "selectProject": "请先选择项目"
+  },
+  "dataStructure": {
+    "title": "数据结构",
+    "create": "新建",
+    "searchPlaceholder": "搜索...",
+    "scopeAll": "全部",
+    "scopeProject": "项目级",
+    "scopeFlow": "流程级",
+    "empty": "暂无数据结构",
+    "projectLevel": "项目级 (global)",
+    "generic": "泛型",
+    "edit": "编辑",
+    "copy": "复制",
+    "promoteToProject": "提升为项目级",
+    "fieldsCount": "{{count}} 个字段",
+    "usageCount": "引用 {{count}} 次",
+    "confirm": {
+      "delete": "确定删除该数据结构？",
+      "deleteWithUsage": "该结构正在被 {{count}} 处引用"
+    },
+    "message": {
+      "loadFailed": "加载数据结构失败",
+      "deleteSuccess": "删除成功",
+      "deleteFailed": "删除失败",
+      "promoteSuccess": "已提升为项目级",
+      "promoteFailed": "操作失败",
+      "copySuccess": "复制成功",
+      "copyFailed": "复制失败",
+      "jsonGenerated": "已从 JSON 生成字段定义",
+      "atLeastOneField": "请至少添加一个字段",
+      "fieldNameRequired": "字段名不能为空",
+      "updated": "数据结构已更新",
+      "created": "数据结构已创建",
+      "saveFailed": "保存失败，请重试"
+    },
+    "drawer": {
+      "editTitle": "编辑数据结构",
+      "createTitle": "创建数据结构",
+      "name": "名称",
+      "namePlaceholder": "如: UserInfo, OrderItem",
+      "nameRequired": "请输入名称",
+      "namePattern": "名称需以字母开头，只能包含字母、数字和下划线",
+      "description": "描述",
+      "descriptionPlaceholder": "描述该数据结构的用途",
+      "scope": "作用域",
+      "scopePlaceholder": "选择作用域",
+      "scopeProjectLevel": "项目级 (global)",
+      "scopeFlowPrefix": "流程: {{name}}",
+      "scopeCurrentFlow": "当前流程",
+      "genericParams": "泛型参数",
+      "genericTooltip1": "启用后可定义泛型结构，如 Result<T>",
+      "genericTooltip2": "在字段类型中可以使用泛型参数（如 T）作为类型占位符",
+      "enableGeneric": "启用泛型",
+      "paramName": "参数名 (如 T)",
+      "paramDesc": "描述 (如 数据类型)",
+      "addParam": "添加参数",
+      "fieldDefinition": "字段定义",
+      "fieldEditor": "字段编辑",
+      "fromJson": "从 JSON 生成",
+      "jsonPlaceholder": "粘贴 JSON 样本，如:\n{\n  \"id\": 1,\n  \"name\": \"张三\",\n  \"email\": \"test@example.com\"\n}",
+      "parseAndGenerate": "解析并生成字段",
+      "enterJson": "请输入 JSON 样本",
+      "invalidJson": "JSON 格式无效: {{error}}",
+      "parseFailed": "解析失败，请检查 JSON 格式",
+      "constraintAny": "任意类型",
+      "constraintObject": "对象",
+      "constraintArray": "数组",
+      "constraintString": "字符串",
+      "constraintNumber": "数字"
+    }
+  },
+  "enum": {
+    "title": "枚举管理",
+    "create": "新建枚举",
+    "searchPlaceholder": "搜索枚举...",
+    "columns": {
+      "name": "名称",
+      "description": "描述",
+      "values": "枚举值",
+      "updatedAt": "更新时间",
+      "actions": "操作"
+    },
+    "edit": "编辑",
+    "confirm": {
+      "delete": "确定删除该枚举？"
+    },
+    "message": {
+      "loadFailed": "加载枚举失败",
+      "deleteSuccess": "删除成功",
+      "deleteFailed": "删除失败",
+      "updated": "枚举已更新",
+      "created": "枚举已创建",
+      "saveFailed": "保存枚举失败",
+      "atLeastOneValue": "请至少添加一个枚举值"
+    },
+    "drawer": {
+      "editTitle": "编辑枚举",
+      "createTitle": "创建枚举",
+      "name": "名称",
+      "namePlaceholder": "如: OrderStatus",
+      "nameRequired": "请输入名称",
+      "namePattern": "名称需以字母开头，只能包含字母、数字和下划线",
+      "description": "描述",
+      "descriptionPlaceholder": "描述枚举用途",
+      "enumValues": "枚举值",
+      "addValue": "添加",
+      "valuePlaceholder": "值",
+      "valueRequired": "请输入值",
+      "labelPlaceholder": "显示名(可选)",
+      "descPlaceholder": "说明(可选)"
+    }
+  },
+  "constant": {
+    "title": "常量管理",
+    "create": "新建常量",
+    "searchPlaceholder": "搜索常量...",
+    "scopeAll": "全部",
+    "scopeProject": "项目级",
+    "scopeFlow": "流程级",
+    "empty": "暂无常量",
+    "projectLevel": "项目级 (global)",
+    "edit": "编辑",
+    "confirm": {
+      "delete": "确定删除该常量？"
+    },
+    "message": {
+      "loadFailed": "加载常量失败",
+      "deleteSuccess": "删除成功",
+      "deleteFailed": "删除失败",
+      "updated": "常量已更新",
+      "created": "常量已创建",
+      "saveFailed": "保存失败，请重试",
+      "numberRequired": "请输入数字常量值",
+      "numberInvalid": "数字常量值无效",
+      "jsonRequired": "请输入 JSON 常量值",
+      "jsonInvalid": "JSON 格式无效",
+      "objectRequired": "对象常量需为 JSON 对象",
+      "arrayRequired": "数组常量需为 JSON 数组"
+    },
+    "drawer": {
+      "editTitle": "编辑常量",
+      "createTitle": "创建常量",
+      "name": "名称",
+      "namePlaceholder": "如: API_KEY, DEFAULT_LIMIT",
+      "nameRequired": "请输入常量名称",
+      "namePattern": "名称需以字母或下划线开头，只能包含字母、数字和下划线",
+      "description": "描述",
+      "descriptionPlaceholder": "描述该常量用途",
+      "scope": "作用域",
+      "scopePlaceholder": "选择作用域",
+      "scopeProjectLevel": "项目级 (global)",
+      "scopeFlowPrefix": "流程: {{name}}",
+      "scopeCurrentFlow": "当前流程",
+      "valueType": "类型",
+      "valueTypeRequired": "请选择常量类型",
+      "value": "常量值",
+      "valueRequired": "请输入常量值",
+      "stringPlaceholder": "请输入字符串常量值",
+      "objectPlaceholder": "请输入 JSON 对象，如 {\"key\":\"value\"}",
+      "arrayPlaceholder": "请输入 JSON 数组，如 [1,2,3]",
+      "types": {
+        "string": "字符串",
+        "number": "数字",
+        "boolean": "布尔值",
+        "object": "对象 (JSON)",
+        "array": "数组 (JSON)"
+      }
+    }
+  },
+  "keyword": {
+    "title": "关键词管理",
+    "libraryDetail": "词库详情",
+    "back": "返回",
+    "editLibraryButton": "编辑词库",
+    "createLibrary": "新建词库",
+    "searchLibrary": "搜索词库",
+    "searchKeyword": "搜索关键词",
+    "searchGroup": "搜索规则组",
+    "noLibrary": "词库不存在",
+    "tabs": {
+      "terms": "关键词",
+      "groups": "规则组"
+    },
+    "columns": {
+      "library": "词库",
+      "description": "描述",
+      "createdAt": "创建时间",
+      "enabled": "状态",
+      "actions": "操作",
+      "keyword": "关键词",
+      "type": "类型",
+      "createdBy": "创建者",
+      "group": "规则组",
+      "actionLevel": "处置等级",
+      "termCount": "关键词数量",
+      "priority": "优先级"
+    },
+    "status": {
+      "enabled": "已启用",
+      "disabled": "已禁用"
+    },
+    "actions": {
+      "manage": "管理",
+      "edit": "编辑",
+      "delete": "删除"
+    },
+    "matchMode": {
+      "normal": "普通词",
+      "pinyin": "拼音词",
+      "combo": "组合词"
+    },
+    "actionLevels": {
+      "delete": "删除",
+      "reviewBeforePublish": "先审后发",
+      "publishBeforeReview": "先发后审",
+      "tagOnly": "仅标记"
+    },
+    "confirm": {
+      "deleteLibrary": "确定删除该词库？",
+      "deleteTerm": "确定删除该关键词？",
+      "deleteGroup": "确定删除该规则组？"
+    },
+    "message": {
+      "loadLibraryFailed": "加载词库失败",
+      "loadTermFailed": "加载关键词失败",
+      "loadGroupFailed": "加载规则组失败",
+      "libraryCreated": "词库创建成功",
+      "libraryUpdated": "词库更新成功",
+      "libraryDeleted": "词库删除成功",
+      "libraryDeleteFailed": "删除词库失败",
+      "librarySaveFailed": "保存词库失败",
+      "termCreated": "关键词创建成功",
+      "termUpdated": "关键词更新成功",
+      "termDeleted": "关键词删除成功",
+      "termDeleteFailed": "删除关键词失败",
+      "termSaveFailed": "保存关键词失败",
+      "groupCreated": "规则组创建成功",
+      "groupUpdated": "规则组更新成功",
+      "groupDeleted": "规则组删除成功",
+      "groupDeleteFailed": "删除规则组失败",
+      "groupSaveFailed": "保存规则组失败"
+    },
+    "modal": {
+      "createLibrary": "新建词库",
+      "editLibrary": "编辑词库",
+      "createTerm": "新建关键词",
+      "editTerm": "编辑关键词",
+      "createGroup": "新建规则组",
+      "editGroup": "编辑规则组"
+    },
+    "form": {
+      "name": "名称",
+      "namePlaceholder": "如: 内容安全词库",
+      "nameRequired": "请输入名称",
+      "description": "描述",
+      "descriptionPlaceholder": "选填",
+      "enabled": "是否启用",
+      "keyword": "关键词",
+      "keywordPlaceholder": "支持中文或拼音",
+      "keywordRequired": "请输入关键词",
+      "matchMode": "匹配类型",
+      "matchModeRequired": "请选择类型",
+      "matchModeExtra": "组合词请使用逗号分隔，如: 走私,枪支",
+      "matchModeOptions": {
+        "normal": "普通词",
+        "pinyin": "拼音词",
+        "combo": "组合词 (全匹配)"
+      },
+      "groupIds": "关联规则组",
+      "groupIdsPlaceholder": "可选",
+      "groupName": "规则组名称",
+      "groupNamePlaceholder": "如: 高风险组合",
+      "groupNameRequired": "请输入规则组名称",
+      "actionLevel": "处置等级",
+      "actionLevelRequired": "请选择处置等级",
+      "priority": "优先级",
+      "termIds": "关联关键词",
+      "termIdsExtra": "输入搜索，支持按需加载",
+      "termIdsPlaceholder": "搜索关键词"
+    }
+  },
+  "fieldTypes": {
+    "string": "字符串",
+    "number": "数字",
+    "boolean": "布尔值",
+    "object": "对象",
+    "array": "数组"
+  },
+  "message": {
+    "loadFlowsFailed": "加载流程列表失败",
+    "createSuccess": "创建成功",
+    "createFailed": "创建失败",
+    "updateSuccess": "更新成功",
+    "updateFailed": "更新失败",
+    "deleteSuccess": "删除成功",
+    "deleteFailed": "删除失败",
+    "loadFailed": "加载失败"
+  }
+}

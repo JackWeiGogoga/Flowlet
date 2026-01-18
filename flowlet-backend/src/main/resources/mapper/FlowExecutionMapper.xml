@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flowlet.mapper.FlowExecutionMapper">
+
+    <select id="selectPageWithFlowName" resultType="com.flowlet.dto.FlowExecutionVO">
+        SELECT
+            e.id,
+            e.project_id AS projectId,
+            e.flow_id AS flowId,
+            f.name AS flowName,
+            e.flow_version AS flowVersion,
+            e.status,
+            e.input_data AS inputData,
+            e.output_data AS outputData,
+            e.error_message AS errorMessage,
+            e.parent_execution_id AS parentExecutionId,
+            e.triggered_by AS triggeredBy,
+            e.started_at AS startedAt,
+            e.completed_at AS completedAt,
+            e.created_at AS createdAt,
+            e.updated_at AS updatedAt
+        FROM flow_execution e
+        LEFT JOIN flow_definition f ON e.flow_id = f.id
+        <where>
+            <if test="projectId != null and projectId != ''">
+                AND e.project_id = #{projectId}
+            </if>
+            <if test="flowId != null and flowId != ''">
+                AND e.flow_id = #{flowId}
+            </if>
+            <if test="status != null and status != ''">
+                AND e.status = #{status}
+            </if>
+            <if test="startTime != null">
+                AND e.started_at &gt;= #{startTime}
+            </if>
+            <if test="endTime != null">
+                AND e.started_at &lt;= #{endTime}
+            </if>
+            <if test="!includeDebug">
+                AND (f.status IS NULL OR f.status != 'debug')
+            </if>
+        </where>
+        ORDER BY e.created_at DESC
+    </select>
+
+</mapper>

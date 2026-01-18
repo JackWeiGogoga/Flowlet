@@ -1,0 +1,143 @@
+{
+  "pageTitle": "系统设置",
+  "pageDescription": "集中管理模型与向量存储接入配置，服务于流程节点的调用与编排。",
+  "breadcrumb": {
+    "settings": "系统设置"
+  },
+  "tabs": {
+    "models": "模型配置",
+    "vectorStores": "向量存储"
+  },
+  "sections": {
+    "standardProviders": "标准提供商",
+    "customModels": "自定义模型",
+    "vectorStoreProviders": "向量存储提供方"
+  },
+  "buttons": {
+    "addModel": "添加模型",
+    "addProvider": "添加提供方"
+  },
+  "columns": {
+    "provider": "模型提供商",
+    "vectorStore": "向量存储",
+    "modelList": "模型列表",
+    "status": "状态",
+    "configTime": "配置时间",
+    "address": "地址"
+  },
+  "status": {
+    "enabled": "启用",
+    "disabled": "禁用",
+    "notConfigured": "未配置",
+    "active": "Active",
+    "inactive": "Disabled"
+  },
+  "modal": {
+    "configureProvider": "配置模型提供方",
+    "configureProviderWithName": "配置 {{name}}",
+    "addModel": "添加模型",
+    "addProvider": "添加提供方",
+    "baseUrl": "Base URL",
+    "baseUrlPlaceholder": "请输入 Base URL",
+    "apiKey": "API Key",
+    "apiKeyPlaceholder": "输入新 key 或留空使用已保存的密钥",
+    "apiKeyHint": "已保存密钥，留空使用已保存密钥",
+    "apiKeyRequired": "请输入 API Key",
+    "clearKey": "清除密钥",
+    "confirmClearKey": "确认清除已保存的 API Key？",
+    "defaultModel": "默认模型",
+    "defaultModelPlaceholder": "如 gpt-4o / claude-3.5-sonnet",
+    "enableProvider": "启用该提供方",
+    "testConnection": "测试连接",
+    "testResultTitle": "连接测试结果",
+    "modelManagement": "模型管理",
+    "refreshModels": "刷新模型列表",
+    "searchModels": "搜索模型...",
+    "modelName": "模型名称",
+    "modelId": "模型 ID",
+    "multimodal": "多模态",
+    "modelList": "模型列表",
+    "modelPlaceholder": "请输入模型名称",
+    "name": "名称",
+    "namePlaceholder": "请输入名称",
+    "providerType": "提供方类型",
+    "database": "数据库",
+    "databasePlaceholder": "请输入数据库名称",
+    "grpcUrl": "gRPC URL",
+    "grpcUrlPlaceholder": "请输入 gRPC URL",
+    "preferGrpc": "优先使用 gRPC",
+    "noModelsYet": "尚未获取模型列表",
+    "noModelsYetDescription": "点击“刷新模型列表”获取最新可用模型",
+    "noMatchingModels": "未找到匹配的模型",
+    "enabledModelsCount": "已启用 {{count}} 个模型"
+  },
+  "customModal": {
+    "editTitle": "编辑自定义模型",
+    "createTitle": "创建自定义模型",
+    "providerName": "Provider 名称",
+    "providerNameRequired": "请输入名称",
+    "providerNamePlaceholder": "例如 qwen / llama / custom-gateway",
+    "modelListLabel": "模型列表",
+    "atLeastOneModel": "请至少添加一个模型",
+    "modelIdRequired": "模型 ID 不能为空",
+    "modelIdPlaceholder": "如 qwen-max / llama-3.1-70b",
+    "addModel": "添加模型",
+    "hint": "自定义模型会以 OpenAI 兼容模式接入，后续可在节点配置中直接选择。"
+  },
+  "vectorStoreModal": {
+    "editTitle": "编辑向量存储",
+    "addTitle": "添加向量存储",
+    "name": "名称",
+    "nameRequired": "请输入名称",
+    "namePlaceholder": "例如 生产 Milvus / Qdrant Cloud",
+    "providerType": "存储类型",
+    "providerTypeRequired": "请选择存储类型",
+    "tokenApiKey": "Token / API Key",
+    "tokenPlaceholder": "私有化部署可留空",
+    "database": "Database",
+    "databaseTooltip": "选择已有数据库或添加新数据库配置。新数据库将在流程节点首次使用时自动创建",
+    "databaseExtra": "Database 会在首次使用时自动创建，无需手动初始化。一个配置对应一个环境",
+    "databasePlaceholder": "选择 Database（默认：default）",
+    "createDbTitle": "创建新数据库",
+    "createDbPlaceholder": "输入数据库名称（如 production）",
+    "createNewDb": "创建新数据库",
+    "dbNameRequired": "请输入数据库名称",
+    "dbExists": "数据库已存在",
+    "dbAddedSuccess": "已添加数据库配置: {{name}}（将在首次使用时自动创建）",
+    "totalDatabases": "共 {{count}} 个数据库",
+    "grpcUrl": "gRPC 地址",
+    "preferGrpc": "优先 gRPC",
+    "useHttp": "使用 HTTP",
+    "hint": "配置完成后可在向量存储节点中选择该提供方。",
+    "fillTypeAndUrl": "请先填写存储类型和 Base URL",
+    "connectionSuccess": "连接成功！",
+    "connectionFailed": "连接失败",
+    "networkError": "网络错误",
+    "testFailed": "测试连接失败"
+  },
+  "confirm": {
+    "deleteProvider": "确认删除该提供方配置？",
+    "deleteVectorStore": "确认删除该向量存储配置？"
+  },
+  "message": {
+    "fillBaseUrl": "请先填写 Base URL",
+    "fillApiKey": "请先填写 API Key 或保存密钥",
+    "modelListRefreshed": "模型列表已刷新",
+    "fillUrlAndKey": "请输入 Base URL 与 API Key（或已保存密钥）后测试",
+    "connectionSuccess": "连接测试成功",
+    "testResult": {
+      "success": "成功",
+      "failed": "失败"
+    }
+  },
+  "modelTypes": {
+    "chat": "对话模型",
+    "embedding": "向量模型",
+    "image": "图像模型",
+    "audio": "音频模型",
+    "video": "视频模型",
+    "unknown": "其他",
+    "modelList": "模型列表",
+    "other": "其他"
+  }
+}

@@ -1,0 +1,19 @@
+我新建了一个空目录仓库，用来新建一个内容处理流程项目。
+
+项目的核心功能是给用户提供一个可视化的流程编排页面，对内容进行流程处理。
+1. 用户在前端页面通过 ui 编排流程，保存，参考 dify
+2. 系统对外提供一个 process 接口，业务调用接口时，传递流程 ID，以及流程中配置好的输入字段，然后根据编排好的流程，对数据进行处理。
+3. 数据处理节点暂时先支持以下几种：
+- 同步节点：调用 API 接口，获取特征，保存
+- 异步节点：发送 kafka 消息，等待异步消息回调，回调回来后，继续执行后续流程
+4. 数据执行中要持久化，方便查看进度，错误恢复
+
+技术选型：
+## 后端 flowlet-backend
+- 语言框架： Java + Springboot + Mybatis
+- 数据库：暂时先试用 sqlite 快速实现
+
+## 前端 flowlet-frontend
+- 语言框架： React + React Dom Router + Vite + TypeScript（如果不熟悉，就直接使用 JavaScript，但是建议使用 TS， 更可控一些） + pnpm
+- UI： And design + React Flow
+- 图标：react-icons

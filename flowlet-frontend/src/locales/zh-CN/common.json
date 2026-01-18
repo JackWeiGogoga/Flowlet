@@ -1,0 +1,215 @@
+{
+  "app": {
+    "name": "Flowlet",
+    "project": "项目"
+  },
+  "project": {
+    "select": "选择项目",
+    "loading": "加载中...",
+    "empty": "暂无项目，请创建新项目",
+    "create": "新建项目",
+    "edit": "编辑项目",
+    "delete": "删除",
+    "editInfo": "编辑信息",
+    "default": "默认",
+    "name": "项目名称",
+    "namePlaceholder": "请输入项目名称",
+    "nameRequired": "请输入项目名称",
+    "nameMax": "项目名称最多50个字符",
+    "description": "项目描述",
+    "descriptionPlaceholder": "请输入项目描述（可选）",
+    "descriptionMax": "项目描述最多500个字符",
+    "createSuccess": "项目 \"{{name}}\" 创建成功",
+    "createFailed": "创建项目失败",
+    "updateSuccess": "项目 \"{{name}}\" 更新成功",
+    "updateFailed": "更新项目失败",
+    "deleteSuccess": "项目 \"{{name}}\" 已删除",
+    "deleteFailed": "删除项目失败",
+    "deleteConfirmTitle": "删除项目",
+    "deleteConfirmDesc": "确定要删除项目 \"{{name}}\" 吗？此操作不可恢复。"
+  },
+  "action": {
+    "save": "保存",
+    "cancel": "取消",
+    "confirm": "确认",
+    "delete": "删除",
+    "edit": "编辑",
+    "create": "新建",
+    "search": "搜索",
+    "refresh": "刷新",
+    "copy": "复制",
+    "close": "关闭",
+    "back": "返回",
+    "submit": "提交",
+    "reset": "重置",
+    "add": "添加",
+    "remove": "移除",
+    "enable": "启用",
+    "disable": "禁用",
+    "test": "测试",
+    "run": "运行",
+    "stop": "停止",
+    "retry": "重试",
+    "export": "导出",
+    "import": "导入",
+    "upload": "上传",
+    "download": "下载",
+    "preview": "预览",
+    "view": "查看",
+    "more": "更多",
+    "loading": "加载中...",
+    "ok": "确定"
+  },
+  "status": {
+    "success": "成功",
+    "failed": "失败",
+    "pending": "待处理",
+    "running": "运行中",
+    "completed": "已完成",
+    "error": "错误",
+    "enabled": "已启用",
+    "disabled": "已禁用",
+    "configured": "已配置",
+    "notConfigured": "未配置",
+    "active": "激活",
+    "inactive": "未激活"
+  },
+  "message": {
+    "saveSuccess": "保存成功",
+    "saveFailed": "保存失败",
+    "deleteSuccess": "删除成功",
+    "deleteFailed": "删除失败",
+    "copySuccess": "复制成功",
+    "copyFailed": "复制失败",
+    "operationSuccess": "操作成功",
+    "operationFailed": "操作失败",
+    "loadFailed": "加载失败",
+    "confirmDelete": "确定删除吗？",
+    "confirmAction": "确定执行此操作吗？",
+    "testSuccess": "连接测试成功",
+    "testFailed": "连接测试失败"
+  },
+  "table": {
+    "total": "共 {{total}} 条",
+    "noData": "暂无数据",
+    "actions": "操作",
+    "createdAt": "创建时间",
+    "updatedAt": "更新时间"
+  },
+  "form": {
+    "required": "此项为必填",
+    "pleaseInput": "请输入",
+    "pleaseSelect": "请选择",
+    "optional": "可选"
+  },
+  "user": {
+    "login": "登录",
+    "logout": "退出登录",
+    "defaultName": "用户",
+    "role": "角色",
+    "roles": {
+      "admin": "管理员",
+      "editor": "编辑者",
+      "viewer": "查看者"
+    },
+    "systemSettings": "系统设置"
+  },
+  "time": {
+    "seconds": "秒",
+    "minutes": "分钟",
+    "hours": "小时",
+    "days": "天",
+    "ago": "前",
+    "configTime": "配置时间"
+  },
+  "timeRange": {
+    "placeholder": "选择时间范围",
+    "custom": "自定义时间范围",
+    "customTitle": "开始和结束时间",
+    "startTime": "开始时间",
+    "endTime": "结束时间",
+    "startPlaceholder": "选择开始时间（可选）",
+    "endPlaceholder": "选择结束时间（可选）",
+    "toNow": "至今",
+    "earliest": "最早",
+    "presets": {
+      "30m": "最近30分钟",
+      "1h": "最近1小时",
+      "6h": "最近6小时",
+      "24h": "最近24小时",
+      "3d": "最近3天",
+      "7d": "最近7天",
+      "14d": "最近14天",
+      "1M": "最近1个月",
+      "3M": "最近3个月",
+      "all": "全部时间"
+    }
+  },
+  "nodeTypes": {
+    "panelTitle": "节点面板",
+    "start": {
+      "label": "开始",
+      "description": "流程起点"
+    },
+    "end": {
+      "label": "结束",
+      "description": "流程终点"
+    },
+    "api": {
+      "label": "API 调用",
+      "description": "HTTP 请求"
+    },
+    "kafka": {
+      "label": "Kafka",
+      "description": "消息发送"
+    },
+    "code": {
+      "label": "代码",
+      "description": "执行 Python 脚本"
+    },
+    "condition": {
+      "label": "条件判断",
+      "description": "分支逻辑"
+    },
+    "transform": {
+      "label": "数据转换",
+      "description": "字段映射"
+    },
+    "subflow": {
+      "label": "子流程",
+      "description": "调用其他流程"
+    },
+    "for_each": {
+      "label": "ForEach",
+      "description": "遍历集合并执行子流程"
+    },
+    "llm": {
+      "label": "LLM 调用",
+      "description": "调用大语言模型"
+    },
+    "vector_store": {
+      "label": "向量存储",
+      "description": "写入/检索向量数据"
+    },
+    "variable_assigner": {
+      "label": "赋值",
+      "description": "变量赋值操作"
+    },
+    "json_parser": {
+      "label": "JSON 解析器",
+      "description": "解析 JSON 字符串"
+    },
+    "simhash": {
+      "label": "Simhash 去重",
+      "description": "文本去重与相似检索"
+    },
+    "keyword_match": {
+      "label": "关键词匹配",
+      "description": "关键词命中检测"
+    },
+    "note": {
+      "label": "备注",
+      "description": "添加文本说明"
+    }
+  }
+}

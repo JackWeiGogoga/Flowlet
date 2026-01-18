@@ -1,0 +1,74 @@
+version: "3.8"
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.4
+    container_name: flowlet-keycloak
+    environment:
+      # 管理员账号 (Keycloak 26.x 新变量名)
+      - KC_BOOTSTRAP_ADMIN_USERNAME=admin
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=admin123
+      # 数据库配置
+      - KC_DB=postgres
+      - KC_DB_URL=jdbc:postgresql://keycloak-db:5432/keycloak
+      - KC_DB_USERNAME=keycloak
+      - KC_DB_PASSWORD=keycloak123
+      # 主机名配置 (Keycloak 26.x 简化配置)
+      - KC_HOSTNAME=${KEYCLOAK_HOSTNAME:-localhost}
+      - KC_HOSTNAME_STRICT=false
+      - KC_HOSTNAME_STRICT_HTTPS=${KEYCLOAK_HOSTNAME_STRICT_HTTPS:-true}
+      - KC_PROXY=edge
+      - KC_PROXY_HEADERS=xforwarded
+      - KC_HOSTNAME_URL=${KEYCLOAK_HOSTNAME_URL:-https://${KEYCLOAK_HOSTNAME:-localhost}}
+      - KC_HOSTNAME_ADMIN_URL=${KEYCLOAK_HOSTNAME_ADMIN_URL:-https://${KEYCLOAK_HOSTNAME:-localhost}}
+      # HTTP/HTTPS 配置
+      - KC_HTTP_ENABLED=${KEYCLOAK_HTTP_ENABLED:-true}
+      - KC_HTTPS_CERTIFICATE_FILE
+      - KC_HTTPS_CERTIFICATE_KEY_FILE
+      - KC_HEALTH_ENABLED=true
+      - KC_METRICS_ENABLED=true
+    command: start
+    ports:
+      - "${KEYCLOAK_HTTP_PORT:-8180}:8080" # HTTP 端口
+      - "${KEYCLOAK_HTTPS_PORT:-8443}:8443" # HTTPS 端口
+      - "${KEYCLOAK_MANAGEMENT_PORT:-9000}:9000" # 管理/健康检查端口
+    volumes:
+      - ./keycloak-theme:/opt/keycloak/themes
+      - ./keycloak-ssl:/opt/keycloak/conf/ssl
+    depends_on:
+      keycloak-db:
+        condition: service_healthy
+    networks:
+      - flowlet-network
+    healthcheck:
+      # Keycloak 26.x 健康检查在 9000 端口
+      test:
+        ["CMD-SHELL", "curl -kf https://localhost:9000/health/ready || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+  keycloak-db:
+    image: postgres:15-alpine
+    container_name: flowlet-keycloak-db
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: keycloak123
+    volumes:
+      - keycloak_postgres_data:/var/lib/postgresql/data
+    networks:
+      - flowlet-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U keycloak -d keycloak"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  keycloak_postgres_data:
+
+networks:
+  flowlet-network:
+    driver: bridge

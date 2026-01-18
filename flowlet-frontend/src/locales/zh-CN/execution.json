@@ -1,0 +1,133 @@
+{
+  "history": {
+    "title": "执行历史",
+    "columns": {
+      "id": "执行ID",
+      "flowName": "流程名称",
+      "version": "版本",
+      "status": "状态",
+      "startedAt": "开始时间",
+      "completedAt": "完成时间",
+      "duration": "耗时",
+      "actions": "操作"
+    },
+    "status": {
+      "all": "全部状态",
+      "completed": "完成",
+      "failed": "失败",
+      "running": "执行中",
+      "pending": "等待中",
+      "waiting": "等待回调"
+    },
+    "filter": {
+      "statusPlaceholder": "执行状态",
+      "flowPlaceholder": "选择流程",
+      "loadingFlows": "加载中...",
+      "noFlows": "暂无流程"
+    },
+    "actions": {
+      "detail": "详情"
+    },
+    "pagination": {
+      "total": "共 {{total}} 条记录"
+    },
+    "message": {
+      "loadFailed": "加载执行历史失败"
+    },
+    "breadcrumb": {
+      "flowManagement": "流程管理",
+      "flow": "流程",
+      "history": "执行历史"
+    }
+  },
+  "detail": {
+    "title": "执行详情",
+    "info": {
+      "executionId": "执行 ID",
+      "flowId": "流程 ID",
+      "flowName": "流程名称",
+      "version": "版本",
+      "flowVersion": "流程版本",
+      "status": "状态",
+      "startedAt": "开始时间",
+      "completedAt": "完成时间",
+      "duration": "耗时",
+      "triggerType": "触发方式",
+      "triggeredBy": "触发人"
+    },
+    "triggerType": {
+      "manual": "手动",
+      "api": "API",
+      "schedule": "定时",
+      "callback": "回调"
+    },
+    "tabs": {
+      "graph": "流程图",
+      "inputs": "输入参数",
+      "outputs": "输出结果",
+      "logs": "执行日志",
+      "nodes": "节点执行",
+      "nodeList": "节点列表"
+    },
+    "cards": {
+      "executionInfo": "执行信息",
+      "inputData": "输入数据",
+      "outputData": "输出数据",
+      "nodeRecords": "节点执行记录"
+    },
+    "sections": {
+      "input": "输入",
+      "output": "输出",
+      "executionInfo": "执行信息",
+      "error": "错误",
+      "waitingCallback": "等待回调"
+    },
+    "nodeList": {
+      "title": "节点列表",
+      "nodeCount": "{{count}} 个节点",
+      "noRecords": "暂无节点执行记录",
+      "noGraphData": "暂无流程图数据"
+    },
+    "nodeExecution": {
+      "columns": {
+        "nodeName": "节点名称",
+        "nodeType": "节点类型",
+        "status": "状态",
+        "startedAt": "开始时间",
+        "completedAt": "完成时间",
+        "duration": "耗时",
+        "error": "错误信息"
+      }
+    },
+    "actions": {
+      "back": "返回",
+      "refresh": "刷新",
+      "rerun": "重新执行",
+      "viewFlow": "查看流程",
+      "copy": "复制"
+    },
+    "zoom": {
+      "zoomIn": "放大",
+      "zoomOut": "缩小",
+      "fitView": "自适应"
+    },
+    "status": {
+      "completed": "已完成",
+      "failed": "失败",
+      "running": "执行中",
+      "waiting": "等待回调",
+      "paused": "已暂停",
+      "pending": "等待中",
+      "notExecuted": "未执行"
+    },
+    "message": {
+      "loadFailed": "加载执行详情失败",
+      "rerunSuccess": "重新执行已启动",
+      "rerunFailed": "重新执行失败",
+      "copySuccess": "已复制到剪贴板",
+      "notExist": "执行记录不存在"
+    },
+    "loading": "加载中...",
+    "noData": "无"
+  }
+}
